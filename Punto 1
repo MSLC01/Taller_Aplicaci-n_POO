@@ -1,0 +1,19 @@
+package taller.pkg1;
+
+import javax.swing.JOptionPane;
+
+public class Taller1 {
+    public static void main(String[] args) {
+      Taller1 e = new Taller1();
+      e.ejecutar();
+    }
+    
+    public void ejecutar(){
+        int valor;
+        proceso p1 = new proceso();
+        valor = Integer.parseInt(JOptionPane.showInputDialog("Ingrese Dato "));
+        p1.area(valor);
+        p1.volumen(valor);
+    }
+    
+}
