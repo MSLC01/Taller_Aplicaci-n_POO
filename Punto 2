@@ -1,0 +1,25 @@
+package taller.pkg1.pkg2;
+
+import javax.swing.JOptionPane;
+
+public class Taller12 {
+
+  
+    public static void main(String[] args) {
+        DatosPasa p1, p2, p3, p4;
+        p1 = new DatosPasa();
+        p2 = new DatosPasa();
+        p3 = new DatosPasa();
+        p4 = new DatosPasa();
+     
+        JOptionPane.showMessageDialog(null, "pasajero numero 1");
+        p1.datos();
+        p4.valor();
+        JOptionPane.showMessageDialog(null, "pasajero numero 2");
+        p2.datos();
+        p4.valor();
+        JOptionPane.showMessageDialog(null, "siguiente pasajero 3");
+        p3.datos();
+        p4.valor();
+    }
+}
