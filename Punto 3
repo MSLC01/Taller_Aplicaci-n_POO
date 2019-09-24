@@ -1,0 +1,35 @@
+package taller.pkg1.pkg3;
+
+import javax.swing.JOptionPane;
+
+public class Taller13 {
+
+    Iconversiones con1, con2, con3;
+    public static void main(String[] args) {
+       Taller13 t = new Taller13();
+       t.tipo();
+    }
+    public void tipo(){
+        short num;
+        int dato;
+        num = Short.parseShort(JOptionPane.showInputDialog("Gragos a fahrenheit (1)"+'\n'+"Fahrenheit a grados (2)"+'\n'+"Grados a kelvin (3)"));
+        switch (num){
+            case 1:
+                con1 = new Temperatura1();
+                dato = Integer.parseInt(JOptionPane.showInputDialog("Inserte grados"));
+                JOptionPane.showMessageDialog(null, "la conversion de grados a fahrenheit es "+con1.operacion(dato));
+                break;
+            case 2:  
+                con2 = new Temperatura2();
+                dato = Integer.parseInt(JOptionPane.showInputDialog("Inserte fahrenheit"));
+                JOptionPane.showMessageDialog(null, "la conversion de fahrenheit a grados es "+con2.operacion(dato));
+                break;
+            case 3:
+                con3 = new Temperatura3();
+                dato = Integer.parseInt(JOptionPane.showInputDialog("Inserte grados"));
+                JOptionPane.showMessageDialog(null, "la conversion de grados a kelvin es "+con3.operacion(dato));
+                break;
+            default:  JOptionPane.showMessageDialog(null, "la conversion no existe");
+        }
+    }
+}
