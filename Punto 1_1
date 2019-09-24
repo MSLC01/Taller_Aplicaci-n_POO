@@ -1,0 +1,54 @@
+package taller.pkg1;
+
+import javax.swing.JOptionPane;
+
+
+public class proceso {
+    private int r, h;
+
+    public void setH(int h) {
+        this.h = h;
+    }
+
+    public int getH() {
+        return h;
+    }
+    private double a, v;
+
+    public void setA(double a) {
+        this.a = a;
+    }
+
+    public void setV(double v) {
+        this.v = v;
+    }
+
+    public double getA() {
+        return a;
+    }
+
+    public double getV() {
+        return v;
+    }
+
+    public void setR(int r) {
+        this.r = r;
+    }
+
+    public int getR() {
+        return r;
+    }
+
+    
+    public double area(int r){
+        a = Math.PI*Math.pow(r, 2);
+        JOptionPane.showMessageDialog(null, "El area es : "+a);
+        return  a;
+    }
+    public double volumen(int r){
+        v = Math.PI*Math.pow(r, 3)*4/3;
+        JOptionPane.showMessageDialog(null, "El volumen es : "+v);
+        return v;
+    }
+    
+}
