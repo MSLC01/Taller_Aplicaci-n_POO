@@ -1,0 +1,57 @@
+package taller.pkg1.pkg5;
+
+public class Calculos {
+   
+    private int cantidad, iva, precio;
+
+    public Calculos(int cantidad, int iva, int precio) {
+        this.cantidad = cantidad;
+        this.iva = iva;
+        this.precio = precio;
+    }
+
+    public void setCantidad(int cantidad) {
+        this.cantidad = cantidad;
+    }
+
+    public void setIva(int iva) {
+        this.iva = iva;
+    }
+
+    public void setPrecio(int precio) {
+        this.precio = precio;
+    }
+
+    public int getCantidad() {
+        return cantidad;
+    }
+
+    public int getIva() {
+        return iva;
+    }
+
+    public int getPrecio() {
+        return precio;
+    }
+    int cont = 1, cont1 = 18;
+    
+    public int contador(){
+        cont1 = cantidad - cont;
+        cont++;
+        if(cont1 == 0){
+            cont = cantidad = 0;
+        }
+        return cont1;
+    }
+    
+    double sum = 0;
+    
+    public double valor(){
+       sum = precio - precio*iva/100+sum;
+       if(cont1 == 0){
+           precio = 0;
+       }
+       return sum;
+    }
+    
+}
