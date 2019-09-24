@@ -1,0 +1,44 @@
+package taller.pkg1.pkg4;
+
+import javax.swing.JOptionPane;
+
+public class Animales {
+    
+    private int numPatas;
+    private String coberturaPiel;
+    private String tipoCirculacion;
+
+    public Animales(int numPatas, String coberturaPiel, String tipoCirculacion) {
+        this.numPatas = numPatas;
+        this.coberturaPiel = coberturaPiel;
+        this.tipoCirculacion = tipoCirculacion;
+    }
+
+    public void setNumPatas(int numPatas) {
+        this.numPatas = numPatas;
+    }
+
+    public void setCoberturaPiel(String coberturaPiel) {
+        this.coberturaPiel = coberturaPiel;
+    }
+
+    public void setTipoCirculacion(String tipoCirculacion) {
+        this.tipoCirculacion = tipoCirculacion;
+    }
+
+    public int getNumPatas() {
+        return numPatas;
+    }
+
+    public String getCoberturaPiel() {
+        return coberturaPiel;
+    }
+
+    public String getTipoCirculacion() {
+        return tipoCirculacion;
+    }
+    
+    public void comida(){
+        JOptionPane.showMessageDialog(null, "La comida favorita de los animales es la carne");
+    }
+}
