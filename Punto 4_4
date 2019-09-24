@@ -1,0 +1,44 @@
+package taller.pkg1.pkg4;
+
+import javax.swing.JOptionPane;
+
+public final class Aves extends Animales{
+    
+    private String pico, medioTransporte;
+
+    public Aves(String pico, String medioTransporte, int numPatas, String coberturaPiel, String tipoCirculacion) {
+        super(numPatas, coberturaPiel, tipoCirculacion);
+        this.pico = pico;
+        this.medioTransporte = medioTransporte;
+    }
+
+    public Aves() {
+        super(0, null, null);
+    }   
+
+    public void setPico(String pico) {
+        this.pico = pico;
+    }
+
+    public void setMedioTransporte(String medioTransporte) {
+        this.medioTransporte = medioTransporte;
+    }
+
+    public String getPico() {
+        return pico;
+    }
+
+    public String getMedioTransporte() {
+        return medioTransporte;
+    }
+    
+    public void datos(){
+        JOptionPane.showMessageDialog(null, "Numero de patas : "+getNumPatas()+"\nCobertura en la piel : "+getCoberturaPiel()+"\nTipo de Circulacion : "+getTipoCirculacion()
+        +"\nPico : "+pico+"\nTipo de transporte : "+medioTransporte);
+    }
+    
+    @Override
+    public void comida(){
+        JOptionPane.showMessageDialog(null, "Nos gusta los insectos y el maiz");
+    }
+}
