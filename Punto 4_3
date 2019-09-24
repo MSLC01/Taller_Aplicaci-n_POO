@@ -1,0 +1,45 @@
+package taller.pkg1.pkg4;
+
+import javax.swing.JOptionPane;
+
+public final class Reptiles extends Animales{
+    
+    private String tipoSangre, nacimiento;
+
+    public Reptiles(String tipoSangre, String nacimiento, int numPatas, String coberturaPiel, String tipoCirculacion) {
+        super(numPatas, coberturaPiel, tipoCirculacion);
+        this.tipoSangre = tipoSangre;
+        this.nacimiento = nacimiento;
+    }
+
+    public Reptiles() {
+        super(0, null, null);
+    }
+    
+
+    public void setTipoSangre(String tipoSangre) {
+        this.tipoSangre = tipoSangre;
+    }
+
+    public void setNacimiento(String nacimiento) {
+        this.nacimiento = nacimiento;
+    }
+
+    public String getTipoSangre() {
+        return tipoSangre;
+    }
+
+    public String getNacimiento() {
+        return nacimiento;
+    }
+    
+    public void datos(){
+        JOptionPane.showMessageDialog(null, "Numero de patas : "+getNumPatas()+"\nCobertura en la piel : "+getCoberturaPiel()+"\nTipo de Circulacion : "+getTipoCirculacion()
+        +"\nTipo de nacimiento : "+nacimiento+"\nTipo de sangre : "+tipoSangre);
+    }
+    
+    @Override
+    public void comida(){
+        JOptionPane.showMessageDialog(null, "Nos gusta los insectos y la yerba");
+    }
+}
