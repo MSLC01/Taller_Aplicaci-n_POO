@@ -1,0 +1,5 @@
+package taller.pkg1.pkg3;
+
+public interface Iconversiones {
+    public double operacion(int a);
+}
