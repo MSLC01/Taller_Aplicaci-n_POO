@@ -1,0 +1,48 @@
+package taller.pkg1.pkg4;
+
+import javax.swing.JOptionPane;
+
+public final class Mamiferos extends Animales{
+    
+    private String nacimiento;
+    private String respiracion;
+    
+    public Mamiferos(String nacimiento, String respiracion, int numPatas, String coberturaPiel, String tipoCirculacion) {
+        super(numPatas, coberturaPiel, tipoCirculacion);
+        this.nacimiento = nacimiento;
+        this.respiracion = respiracion;
+    }
+
+    public void setNacimiento(String nacimiento) {
+        this.nacimiento = nacimiento;
+    }
+
+    public void setRespiracion(String respiracion) {
+        this.respiracion = respiracion;
+    }
+
+    public String getNacimiento() {
+        return nacimiento;
+    }
+
+    public String getRespiracion() {
+        return respiracion;
+    }
+
+    public Mamiferos() {
+        super(0, null, null);
+    }
+    
+   
+    public void datos(){
+        JOptionPane.showMessageDialog(null, "Numero de patas : "+getNumPatas()+"\nCobertura en la piel : "+getCoberturaPiel()+"\nTipo de Circulacion : "+getTipoCirculacion()
+        +"\nTipo de nacimiento : "+nacimiento+"\nTipo de rspiracion : "+respiracion);
+    }
+    
+    @Override
+    public void comida(){
+        JOptionPane.showMessageDialog(null, "Nos gusta la leche y la yerva");
+    }
+    
+    
+}
