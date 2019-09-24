@@ -1,0 +1,65 @@
+package taller.pkg1.pkg2;
+
+import javax.swing.JOptionPane;
+
+
+public class DatosPasa {
+    int precio = 0, cont = 0, cont1 = 1;
+    private int numViaje, hora, costo;
+    private String fecha, nomPasa;
+
+    public void setNumViaje(int numViaje) {
+        this.numViaje = numViaje;
+    }
+
+    public void setHora(int hora) {
+        this.hora = hora;
+    }
+
+    public void setCosto(int costo) {
+        this.costo = costo;
+    }
+
+    public void setFecha(String fecha) {
+        this.fecha = fecha;
+    }
+
+    public void setNomPasa(String nomPasa) {
+        this.nomPasa = nomPasa;
+    }
+
+    public int getNumViaje() {
+        return numViaje;
+    }
+
+    public int getHora() {
+        return hora;
+    }
+
+    public int getCosto() {
+        return costo;
+    }
+
+    public String getFecha() {
+        return fecha;
+    }
+
+    public String getNomPasa() {
+        return nomPasa;
+    }
+    public void datos(){
+        nomPasa = JOptionPane.showInputDialog("Ingrese Nombre");
+        numViaje = Integer.parseInt(JOptionPane.showInputDialog("Ingrese Numero de viaje"));
+        hora = Integer.parseInt(JOptionPane.showInputDialog("Ingrese Hora / formato 24 hrs"));
+        fecha = JOptionPane.showInputDialog("Ingrese Fecha");
+    }
+    public void valor(){
+        costo = Integer.parseInt(JOptionPane.showInputDialog("Ingrese valor del viaje"));
+        precio = precio + costo;
+        cont++;
+        if(cont == 3){
+            JOptionPane.showMessageDialog(null, "el precio total es "+precio);
+        }
+    }
+    
+}
