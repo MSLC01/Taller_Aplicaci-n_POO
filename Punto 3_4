@@ -1,0 +1,13 @@
+package taller.pkg1.pkg3;
+
+public class Temperatura3 implements Iconversiones{
+
+    @Override
+    public double operacion(int a) {
+        double kelvin;
+        
+        kelvin = a+273.15;
+        return kelvin;
+    }
+    
+}
