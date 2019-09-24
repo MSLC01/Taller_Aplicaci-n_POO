@@ -1,0 +1,60 @@
+package taller.pkg1.pkg4;
+
+import javax.swing.JOptionPane;
+
+public class Taller14 {
+
+    public static void main(String[] args) {
+       Taller14 t = new Taller14();
+       t.resultado();
+    }
+    
+    public void imprimir(){
+        Mamiferos m = new Mamiferos();
+        m.setCoberturaPiel("lisa");
+        m.setNumPatas(4);
+        m.setNacimiento("vientre");
+        m.setRespiracion("pulmonar");
+        m.setTipoCirculacion("doble");
+        m.datos();
+        m.comida();
+    }
+    public void imprimir2(){
+        Reptiles r = new Reptiles();
+        r.setCoberturaPiel("escamas");
+        r.setNacimiento("oviparos");
+        r.setNumPatas(4);
+        r.setTipoCirculacion("doble");
+        r.setTipoSangre("fria");
+        r.datos();
+        r.comida();
+    }
+    
+    public void imprimir3(){
+        Aves a = new Aves();
+        a.setCoberturaPiel("plumas");
+        a.setMedioTransporte("aire");
+        a.setNumPatas(2);
+        a.setPico("pico liso");
+        a.setTipoCirculacion("doble");
+        a.datos();
+        a.comida();
+    }
+    public void resultado(){
+        String tipo;
+        tipo = JOptionPane.showInputDialog("Tipo de animal");
+        
+        switch(tipo){
+            case "mamiferos":
+                imprimir();
+                break;
+            case "reptiles" :
+                imprimir2();
+                break;
+            case "aves":
+                imprimir3();
+                break;
+            default: JOptionPane.showMessageDialog(null, "el tipo de animal no esta");
+        }
+    }
+}
