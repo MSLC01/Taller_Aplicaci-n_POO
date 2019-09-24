@@ -1,0 +1,12 @@
+package taller.pkg1.pkg3;
+
+public class Temperatura1 implements Iconversiones{
+
+    @Override
+    public double operacion(int a) {
+        double fahren;
+        
+        fahren = a*1.8+32;
+        return fahren;
+    }
+}
